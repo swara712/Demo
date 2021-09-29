@@ -1,5 +1,6 @@
 package map;
 
+import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,7 +33,9 @@ public class Primusnewlogin
 			  input2[0]=url;
 		//  driver.manage().timeouts().implicitlyWait(10, TimeUnit	.SECONDS);
 			  
-			  Reusable.openApp(input2);
+			  
+			  
+			   Reusable.openApp(input2);
 			
 		   
 		}
@@ -44,7 +47,7 @@ public class Primusnewlogin
 			 Object[] input3=new Object[2];
 			  input3[0]="//*[@type='text']";
 			  input3[1]=uname;
-			  Reusable.sendkeys(input3);
+			  Hashtable<String,Object> outputParameters=  Reusable.sendkeys(input3);
 			 
 			  
 		}

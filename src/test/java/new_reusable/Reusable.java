@@ -1,5 +1,6 @@
 package new_reusable;
 
+import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -49,7 +50,7 @@ Thread.sleep(5000);
 	
 		}
 	
-	public static void sendkeys(Object []input_parameter) throws InterruptedException
+	public static Hashtable<String,Object> sendkeys(Object []input_parameter) throws InterruptedException
 	{
 		Thread.sleep(3000);
 		String xpath=(String) input_parameter[0];
@@ -58,6 +59,14 @@ Thread.sleep(5000);
 		WebElement total=driver.findElement(By.xpath(xpath));
 		total.clear();
 		total.sendKeys(enter_text);
+		Hashtable<String, Object> outputParameters = new Hashtable<String, Object>();
+		
+		  outputParameters.put("STATUS", "PASS");
+		  	 outputParameters.put("MESSAGE", "Action:sendkeys,Input Given: " +input_parameter[0].toString() );
+		  
+
+		return outputParameters;
+		
 		
 	}
 	

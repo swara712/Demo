@@ -33,6 +33,7 @@ public class SeleniumOperations
 			  driver.manage().window().maximize();
 			  
 			  }
+		  
 		
 	}
 	
